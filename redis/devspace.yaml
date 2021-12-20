@@ -1,0 +1,12 @@
+version: v1beta11
+deployments:
+- name: redis
+  helm:
+    componentChart: true
+    values:
+      containers:
+      - image: redis
+
+hooks:
+  - command: "echo 'Hello from dependency redis'"
+    events: ["before:build:*"]

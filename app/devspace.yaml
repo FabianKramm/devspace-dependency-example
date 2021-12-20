@@ -1,0 +1,27 @@
+version: v1beta11
+
+vars:
+  - name: IMAGE
+    value: mydockeruser/devspace
+
+images:
+  default:
+    image: ${IMAGE}
+
+deployments:
+- name: app
+  helm:
+    componentChart: true
+    values:
+      containers:
+      - image: ${IMAGE}
+
+dependencies:
+- name: redis
+  source:
+    git: git@github.com:bforchhammer/devspace-dependency-example
+    subPath: redis
+
+hooks:
+  - command: "echo 'Hello from dependency app'"
+    events: ["before:build:*"]

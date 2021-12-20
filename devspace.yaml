@@ -1,0 +1,15 @@
+version: v1beta11
+
+dependencies:
+- name: app
+  source:
+    git: git@github.com:bforchhammer/devspace-dependency-example
+    subPath: app
+- name: nginx
+  source:
+    git: git@github.com:bforchhammer/devspace-dependency-example
+    subPath: nginx
+- name: redis
+  source:
+    git: git@github.com:bforchhammer/devspace-dependency-example
+    subPath: redis
