@@ -6,13 +6,3 @@ deployments:
     values:
       containers:
       - image: nginx
-dev:
-  ports:
-  - imageSelector: nginx
-    forward:
-      - port: 8080
-        remotePort: 80
-
-hooks:
-  - command: "echo 'Hello from dependency nginx'"
-    events: ["before:build:*"]

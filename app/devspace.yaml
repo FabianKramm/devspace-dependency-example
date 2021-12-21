@@ -21,7 +21,3 @@ dependencies:
   source:
     git: git@github.com:bforchhammer/devspace-dependency-example
     subPath: redis
-
-hooks:
-  - command: "echo 'Hello from dependency app'"
-    events: ["before:build:*"]
