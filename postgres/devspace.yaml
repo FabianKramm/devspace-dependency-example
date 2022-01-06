@@ -1,20 +1,26 @@
 version: v1beta11
 
+vars:
+  - name: POSTGRES_USER
+    value: "postgres"
+
 deployments:
-- name: postgres
-  helm:
-    componentChart: true
-    values:
-      containers:
-      - image: postgres:12
-        env:
-          - name: POSTGRES_HOST_AUTH_METHOD
-            value: "trust"
-        readinessProbe:
-          exec:
-            command: ["pg_isready", "-U", "postgres"]
-          initialDelaySeconds: 5
-          periodSeconds: 2
-      service:
-        ports:
-        - port: 5432
+  - name: postgres
+    helm:
+      componentChart: true
+      values:
+        containers:
+          - image: postgres:12
+            env:
+              - name: POSTGRES_USER
+                value: "${POSTGRES_USER}"
+              - name: POSTGRES_HOST_AUTH_METHOD
+                value: "trust"
+            readinessProbe:
+              exec:
+                command: ["pg_isready", "-U", "postgres"]
+              initialDelaySeconds: 5
+              periodSeconds: 2
+        service:
+          ports:
+            - port: 5432
