@@ -5,7 +5,3 @@ dependencies:
   source:
     git: git@github.com:bforchhammer/devspace-dependency-example
     subPath: app
-- name: postgres
-  source:
-    git: git@github.com:bforchhammer/devspace-dependency-example
-    subPath: postgres

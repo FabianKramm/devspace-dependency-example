@@ -6,6 +6,4 @@ This repo shows a devspace example project with git dependencies, with the same 
   - app
     - postgres
     - app2
-      - app
       - postgres
-  - postgres
