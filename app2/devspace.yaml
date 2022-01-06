@@ -9,7 +9,7 @@ images:
     image: ${IMAGE}
 
 deployments:
-- name: app
+- name: app2
   helm:
     componentChart: true
     values:
@@ -21,7 +21,3 @@ dependencies:
   source:
     git: git@github.com:bforchhammer/devspace-dependency-example
     subPath: redis
-- name: app2
-  source:
-    git: git@github.com:bforchhammer/devspace-dependency-example
-    subPath: app2
