@@ -18,7 +18,6 @@ deployments:
 
 dependencies:
 - name: app2
-  skipBuild: true
   source:
     git: git@github.com:bforchhammer/devspace-dependency-example
     subPath: app2
