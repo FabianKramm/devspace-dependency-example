@@ -17,10 +17,10 @@ deployments:
       - image: ${IMAGE}
 
 dependencies:
-- name: redis
+- name: postgres
   source:
     git: git@github.com:bforchhammer/devspace-dependency-example
-    subPath: redis
+    subPath: postgres
 - name: app2
   source:
     git: git@github.com:bforchhammer/devspace-dependency-example

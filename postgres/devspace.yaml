@@ -1,9 +1,9 @@
 version: v1beta11
 
 deployments:
-- name: redis
+- name: postgres
   helm:
     componentChart: true
     values:
       containers:
-      - image: redis
+      - image: postgres

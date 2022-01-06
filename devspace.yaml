@@ -5,7 +5,7 @@ dependencies:
   source:
     git: git@github.com:bforchhammer/devspace-dependency-example
     subPath: app
-- name: redis
+- name: postgres
   source:
     git: git@github.com:bforchhammer/devspace-dependency-example
-    subPath: redis
+    subPath: postgres
