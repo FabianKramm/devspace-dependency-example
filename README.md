@@ -8,3 +8,4 @@ This repo shows a devspace example project with git dependencies, with the same 
     - app2
       - app
       - postgres
+  - postgres
