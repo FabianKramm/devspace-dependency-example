@@ -19,5 +19,5 @@ deployments:
 dependencies:
 - name: postgres
   source:
-    git: git@github.com:bforchhammer/devspace-dependency-example
+    git: https://github.com/FabianKramm/devspace-dependency-example
     subPath: postgres
