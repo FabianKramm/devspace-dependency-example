@@ -3,5 +3,5 @@ version: v1beta11
 dependencies:
 - name: app
   source:
-    git: git@github.com:bforchhammer/devspace-dependency-example
+    git: https://github.com/FabianKramm/devspace-dependency-example
     subPath: app
